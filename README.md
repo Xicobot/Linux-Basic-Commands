@@ -107,6 +107,49 @@
 - `wget <URL>`: Downloads a file from a URL.
 - `curl <URL>`: Fetches content from a URL.
 
+## Disk Space Management
+- `df -h`: Displays disk usage in a human-readable format (GB, MB).
+- `df -i`: Shows inode usage on the disk.
+- `du -sh <path>`: Displays the total size of a specific directory.
+- `du -h --max-depth=1 <path>`: Lists the sizes of subdirectories.
+
+## Disk and Partition Status
+- `lsblk`: Shows disks and partitions in a tree format.
+- `fdisk -l`: Lists available disk partitions.
+- `blkid`: Displays UUID and filesystem type of disks.
+- `mount | column -t`: Shows currently mounted filesystems.
+- `cat /etc/fstab`: Lists partitions mounted at boot.
+
+## Disk Health and Performance
+- `smartctl -a /dev/sdX`: Displays S.M.A.R.T. information (requires `smartmontools`).
+- `iostat -dx 1`: Monitors disk activity (requires `sysstat`).
+- `hdparm -I /dev/sdX`: Shows detailed disk information.
+
+## Finding Large Files
+- `find / -type f -size +1G`: Searches for files larger than 1GB.
+- `du -ah / | sort -rh | head -n 10`: Displays the 10 largest files/directories.
+
+## File System Maintenance
+- `fsck /dev/sdX`: Checks and repairs a filesystem.
+- `tune2fs -l /dev/sdX`: Displays information about an ext4 filesystem.
+- `mkfs.ext4 /dev/sdX`: Formats a partition as ext4 (**Warning!** This erases all data).
+
+## Linux File Structure
+- `/bin`: Contains essential commands.
+- `/boot`: Contains boot files.
+- `/dev`: Contains device files.
+- `/etc`: Configuration files.
+- `/home`: User directories.
+- `/var`: Variable data, such as logs.
+- `/lib`: Shared libraries.
+- `/media`: Mount point for external devices.
+- `/mnt`: Mount point for additional disks.
+- `/opt`: Third-party applications.
+- `/proc`: System process information.
+- `/sbin`: Essential commands for administrators.
+- `/srv`: Service-related data.
+- `/sys`: System information.
+
 ## Commands in Windows
 
 ### Networking
