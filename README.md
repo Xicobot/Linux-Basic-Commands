@@ -149,7 +149,12 @@
 - `/sbin`: Essential commands for administrators.
 - `/srv`: Service-related data.
 - `/sys`: System information.
+- `cat /etc/fstab`: Lists partitions mounted at boot.
 
+Example /etc/fstab entry: 
+```bash
+UUID=xxxx-xxxx  /mnt/data  ext4  defaults  0  2
+```
 ## Commands in Windows
 
 ### Networking
